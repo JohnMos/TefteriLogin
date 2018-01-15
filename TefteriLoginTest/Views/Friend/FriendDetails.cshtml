@@ -1,0 +1,34 @@
+﻿@model IEnumerable<TefteriLoginTest.Models.FriendDetails>
+
+@using TefteriLoginTest.Models;
+
+@{
+    ViewBag.Title = "FriendDetails";
+}
+<main role="main" class="container">
+    <div style="font-family:Arial"></div>
+    <h2>Friend Details</h2>
+    <p class="lead"
+        <div>
+            @foreach (var item in Model)
+    {
+
+<ul>
+      <li>  
+        @item.ID    
+        @item.Name
+        @item.Gender
+        @item.City
+          </li>
+    </ul>
+
+}
+
+
+</p>
+        </div>
+  
+
+</main>
+
+

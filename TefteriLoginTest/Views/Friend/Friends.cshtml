@@ -1,0 +1,25 @@
+﻿@model IEnumerable<TefteriLoginTest.Models.Friend>
+@using TefteriLoginTest.Models;
+
+<div class="starter-template">
+    <h1>Friends</h1>
+    <p class="lead">
+
+        <div>
+            <ul>
+
+      @foreach (Friend friend in Model)
+      {
+          <li>
+            @Html.ActionLink(friend.Name, "FriendDetail")
+            </li>
+       }
+
+            </ul>
+                </div>
+
+    </p>
+</div>
+
+
+
