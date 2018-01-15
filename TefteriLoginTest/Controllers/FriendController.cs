@@ -23,7 +23,7 @@ namespace TefteriLoginTest.Controllers
         {
             MyDbContext myDbContext = new MyDbContext();
             List<FriendDetails> friendetails = myDbContext.FriendsDetails.ToList();
-
+            // return the view
             return View("FriendDetails",friendetails);
         }
 
