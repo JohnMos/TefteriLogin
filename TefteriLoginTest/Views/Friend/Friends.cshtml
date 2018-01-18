@@ -11,7 +11,7 @@
       @foreach (Friend friend in Model)
       {
           <li>
-            @Html.ActionLink(friend.Name, "FriendDetail")
+            @Html.ActionLink(friend.Name, "FriendDetail", new { id = friend.ID })
             </li>
        }
 
