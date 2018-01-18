@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<TefteriLoginTest.Models.Friend>
+
+
 @using TefteriLoginTest.Models;
 
 <div class="starter-template">
@@ -11,7 +13,7 @@
       @foreach (Friend friend in Model)
       {
           <li>
-            @Html.ActionLink(friend.Name, "FriendDetail")
+            @Html.ActionLink(friend.Name, "FriendDetail", new { ID = friend.ID })
             </li>
        }
 

@@ -8,7 +8,7 @@ namespace TefteriLoginTest.Models
 {
     public class MyDbContext : DbContext
     {
-        public MyDbContext() : base(@"Data Source=localhost\sqlexpress;Initial Catalog=Tefteri;Persist Security Info=True;User ID=sa;Password=Mosxolios!@#$56")
+        public MyDbContext() : base("name=cns")
         {
 
         }

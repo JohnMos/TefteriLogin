@@ -19,12 +19,13 @@ namespace TefteriLoginTest.Controllers
             this.Context = new MyDbContext();
         }
 
-        public ActionResult FriendDetail()
+        public ActionResult FriendDetail(int ID)
         {
             MyDbContext myDbContext = new MyDbContext();
-            List<FriendDetails> friendetails = myDbContext.FriendsDetails.ToList();
-            // return the view
-            return View("FriendDetails",friendetails);
+            FriendDetails friendetails = myDbContext.FriendsDetails.Find(ID);
+            List<FriendDetails> flist = new List<FriendDetails>();
+            flist.Add(friendetails);
+            return View("FriendDetails",flist);
         }
 
 

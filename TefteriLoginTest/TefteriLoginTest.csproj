@@ -115,9 +115,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801102247160_FriendsDetails.cs" />
-    <Compile Include="Migrations\201801102247160_FriendsDetails.Designer.cs">
-      <DependentUpon>201801102247160_FriendsDetails.cs</DependentUpon>
+    <Compile Include="Migrations\201801181809330_initial db.cs" />
+    <Compile Include="Migrations\201801181809330_initial db.Designer.cs">
+      <DependentUpon>201801181809330_initial db.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FriendDetails.cs" />
@@ -151,8 +151,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801102247160_FriendsDetails.resx">
-      <DependentUpon>201801102247160_FriendsDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801181809330_initial db.resx">
+      <DependentUpon>201801181809330_initial db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

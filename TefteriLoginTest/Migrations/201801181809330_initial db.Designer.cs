@@ -7,13 +7,13 @@ namespace TefteriLoginTest.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class FriendsDetails : IMigrationMetadata
+    public sealed partial class initialdb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FriendsDetails));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialdb));
         
         string IMigrationMetadata.Id
         {
-            get { return "201801102247160_FriendsDetails"; }
+            get { return "201801181809330_initial db"; }
         }
         
         string IMigrationMetadata.Source
