@@ -26,6 +26,7 @@ namespace TefteriLoginTest.Controllers
             List<FriendDetails> flist = new List<FriendDetails>();
             flist.Add(friendetails);
             return View("FriendDetails",flist);
+
         }
 
 
