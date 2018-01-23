@@ -140,6 +140,7 @@
     <Content Include="Views\Friend\Friends.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Friend\FriendDetails.cshtml" />
+    <Content Include="Views\Account\Dashboard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

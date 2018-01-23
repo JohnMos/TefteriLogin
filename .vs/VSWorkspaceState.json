@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TefteriLoginTest",
+    "\\TefteriLoginTest\\Controllers",
+    "\\TefteriLoginTest\\Views",
+    "\\TefteriLoginTest\\Views\\Friend"
   ],
-  "SelectedNode": "\\TefteriLoginTest.sln",
+  "SelectedNode": "\\TefteriLoginTest\\fonts",
   "PreviewInSolutionExplorer": false
 }

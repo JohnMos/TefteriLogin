@@ -22,7 +22,7 @@ namespace TefteriLoginTest.Controllers
             if (user.Username == "admin" && user.Password == "admin")
             {
                 FormsAuthentication.SetAuthCookie(user.Username, false);
-                return Redirect("~/Friend/Friends");
+                return Redirect("~/Account/LoginPage");
             }
             else
             {
@@ -30,6 +30,13 @@ namespace TefteriLoginTest.Controllers
             }
 
             return View(user);
+        
+        }
+        public ActionResult Dashboard()
+        {
+
+            return View("Dashboard");
+
         }
     }
 }
