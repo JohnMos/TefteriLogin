@@ -8,22 +8,30 @@
 <main role="main" class="container">
     <div style="font-family:Arial"></div>
     <h2>Friend Details</h2>
+    
     <p class="lead"
         <div>
             @foreach (var item in Model)
     {
 
 <ul>
-      <li>  
-        @item.ID    
+    <li>
+        @item.ID
+        <span>-</span>
+
         @item.Name
+        <span>-</span>
+
         @item.Gender
+        <span>-</span>
+
         @item.City
-          </li>
+    
+    </li>
     </ul>
 
 }
-
+            @Html.ActionLink("Back to List", "Friends", null, new { @class = "btn btn-default"})
 
 </p>
         </div>
