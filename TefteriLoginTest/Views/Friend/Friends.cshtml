@@ -10,16 +10,16 @@
         <div>
             <ul>
 
-      @foreach (Friend friend in Model)
-      {
-          <li>
-            @Html.ActionLink(friend.Name, "FriendDetail", new { ID = friend.ID })
-            </li>
-       }
+                @foreach (Friend friend in Model)
+            {
+                <li>
+                    @Html.ActionLink(friend.Name, "FriendDetail", new { ID = friend.ID })
+                </li>
+        }
 
             </ul>
-                </div>
-
+        </div>
+        @Html.ActionLink("Back to Dashboard", "Dashboard","Account", null, new { @class = "btn btn-default" })
     </p>
 </div>
 

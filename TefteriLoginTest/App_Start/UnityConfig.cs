@@ -37,7 +37,7 @@ namespace TefteriLoginTest
         /// </remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
-            container.RegisterType<FriendRepository, MockFriendRepository>();
+            container.RegisterType<FriendRepository, SQLFriendRepository>();
         }
     }
 }
