@@ -3,39 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TefteriLoginTest.Models;
+using TefteriLoginTest.Repository;
 
 namespace TefteriLoginTest.Controllers
 {
-    
     public class FriendController : Controller
     {
-        
+        private readonly FriendRepository friendRepository;
 
-        public MyDbContext Context { get; private set; }
-
-        public FriendController()
+        public FriendController(FriendRepository friendRepository)
         {
-            this.Context = new MyDbContext();
+            this.friendRepository = friendRepository;
         }
 
         public ActionResult FriendDetail(int ID)
         {
-            MyDbContext myDbContext = new MyDbContext();
-            FriendDetails friendetails = myDbContext.FriendsDetails.Find(ID);
-            List<FriendDetails> flist = new List<FriendDetails>();
-            flist.Add(friendetails);
-            return View("FriendDetails",flist);
-
+            return View("FriendDetails", friendRepository.getFriendDetails());
         }
-
-
+        
         public ActionResult Friends()
         {
-            List<Friend> friends = this.Context.Friends.ToList();
+            List<Models.Friend> friends = friendRepository.getAllFriends();
             return View("Friends", friends);
         }
-
-        
     }
 }
