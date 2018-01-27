@@ -1,7 +1,23 @@
-﻿
+﻿@model IEnumerable<TefteriLoginTest.Models.Friend>
+
+
+@using TefteriLoginTest.Models;
+
 @{
     ViewBag.Title = "CreateGroup";
 }
 
 <h2>Create Group</h2>
+@foreach (Friend friend in Model)
+{
+    <ul>
+        <li>@Html.ActionLink(friend.Name, "FriendDetail", new { ID = friend.ID })</li>
 
+
+        @Html.CheckBox(friend.Name)
+
+
+
+    </ul>
+
+}
