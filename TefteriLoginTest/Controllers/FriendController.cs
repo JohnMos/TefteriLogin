@@ -18,7 +18,7 @@ namespace TefteriLoginTest.Controllers
 
         public ActionResult FriendDetail(int ID)
         {
-            return View("FriendDetails", friendRepository.getFriendDetails());
+            return View("FriendDetails", friendRepository.getFriendDetails(ID));
         }
         
         public ActionResult Friends()

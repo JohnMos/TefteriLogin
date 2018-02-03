@@ -20,7 +20,7 @@ namespace TefteriLoginTest.Repository
             };
         }
 
-        public List<FriendDetails> getFriendDetails()
+        public List<FriendDetails> getFriendDetails(int id)
         {
             return new List<FriendDetails>()
             {

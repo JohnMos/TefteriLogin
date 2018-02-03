@@ -16,9 +16,9 @@ namespace TefteriLoginTest.Repository
             return dbContext.Friends.ToList();
         }
 
-        public List<FriendDetails> getFriendDetails()
+        public List<FriendDetails> getFriendDetails(int id)
         {
-            return dbContext.FriendsDetails.ToList();
+            return new List<FriendDetails>() { dbContext.FriendsDetails.Find(id) };
         }
     }
 }

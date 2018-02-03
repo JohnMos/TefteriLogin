@@ -11,6 +11,6 @@ namespace TefteriLoginTest.Repository
     {
         List<Friend> getAllFriends();
 
-        List<FriendDetails> getFriendDetails();
+        List<FriendDetails> getFriendDetails(int id);
     }
 }
