@@ -136,6 +136,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FriendDetails.cs" />
+    <Compile Include="Models\FriendModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Models\Friend.cs" />

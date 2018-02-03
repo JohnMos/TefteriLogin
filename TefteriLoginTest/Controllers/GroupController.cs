@@ -20,8 +20,10 @@ namespace TefteriLoginTest.Controllers
         // GET: Group
         public ActionResult CreateGroup()
         {
+            FriendModel fm = new FriendModel();
             List<Friend> friends = friendRepository.getAllFriends();
-            return View("CreateGroup", friends);
+            fm.Friends = friends;
+            return View("CreateGroup", fm);
         }
 
         public ActionResult EditGroup()

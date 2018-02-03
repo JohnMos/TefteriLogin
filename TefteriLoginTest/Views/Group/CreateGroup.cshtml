@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TefteriLoginTest.Models.Friend>
+﻿@model TefteriLoginTest.Models.FriendModel
 
 
 @using TefteriLoginTest.Models;
@@ -8,13 +8,14 @@
 }
 
 <h2>Create Group</h2>
-@foreach (Friend friend in Model)
-{
-    <ul>
-        <li>@Html.ActionLink(friend.Name, "FriendDetail", new { ID = friend.ID })</li>
 
-
-        @Html.CheckBox(friend.Name)
-    </ul>
-
-}
+<ul>
+    @for (int i = 0; i < Model.Friends.Count; i++)
+    {
+        <li>
+            @Html.CheckBox("isChecked", false)
+            <label>@Model.Friends[i].Name</label>
+            @Html.HiddenFor(m => m.Friends[i].ID)
+        </li>
+    }
+</ul>
