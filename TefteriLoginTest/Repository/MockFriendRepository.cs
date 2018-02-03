@@ -11,21 +11,28 @@ namespace TefteriLoginTest.Repository
     /// </summary>
     public class MockFriendRepository : FriendRepository
     {
+        private readonly List<Friend> friends = new List<Friend>()
+        {
+            new Friend() { ID = 1, Name = "John" },
+            new Friend() { ID = 2, Name = "Anthony" }
+        };
+
+        private readonly List<FriendDetails> friendDetails = new List<FriendDetails>()
+        {
+            new FriendDetails() { ID = 1, Name = "John", City = "Athens", Gender = "Male" },
+            new FriendDetails() { ID = 2, Name = "Anthony", City = "Athens", Gender = "Male" }
+        };
+
         public List<Friend> getAllFriends()
         {
-            return new List<Friend>()
-            {
-                new Friend() { ID = 1, Name = "John" },
-                new Friend() { ID = 2, Name = "Anthony" }
-            };
+            return friends;
         }
 
         public List<FriendDetails> getFriendDetails(int id)
         {
             return new List<FriendDetails>()
             {
-                new FriendDetails() { ID = 1, City = "Athens", Gender = "Male", Name = "John" },
-                new FriendDetails() { ID = 2, City = "Athens", Gender = "Male", Name = "Anthony" },
+                friendDetails.Find(f => f.ID == id)
             };
         }
     }
