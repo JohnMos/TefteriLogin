@@ -30,5 +30,11 @@ namespace TefteriLoginTest.Controllers
         {
             return View("EditGroup");
         }
+
+        public ActionResult ExistingGroup()
+        {
+            return View("ExistingGroup");
+        }
     }
+        
 }
